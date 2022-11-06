@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('wallets', function (Blueprint $table) {
             $table->id();
             $table->string('userId');
-            $table->string('balance')->unique();
+            $table->string('balance')->nullable();
             $table->string('Total of income')->nullable();
             $table->string('Total of expenses')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
