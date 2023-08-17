@@ -27,9 +27,9 @@ return new class extends Migration
             $table->string('registeredBy')->nullable();
             $table->integer('numberOfUserRegistered')->default(0);
             $table->integer('numberOfUserVisited')->default(0);
+            $table->enum('level', ['Novice Referrer', 'Expert Referrer', 'Master Referrer'])->default('Novice Referrer');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-
         });
     }
 
